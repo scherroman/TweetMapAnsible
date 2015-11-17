@@ -1,0 +1,6 @@
+---
+- name: Install git
+  apt: pkg=git state=installed update_cache=true
+
+- name: Clone/Pull nodeTweet repo
+  git: repo={{ project_repo }} dest={{ project_root }}/{{project_name}} version={{ branch }} accept_hostkey=True

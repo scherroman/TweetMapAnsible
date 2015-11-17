@@ -1,0 +1,3 @@
+---
+- name: make pm2 restart on reboot
+  command: pm2 startup ubuntu

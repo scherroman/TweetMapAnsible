@@ -1,0 +1,6 @@
+---
+project_name: nodeTweet
+project_root: /home/ubuntu
+project_repo: git@github.com:scherroman/NodeTweet.git
+branch: master
+

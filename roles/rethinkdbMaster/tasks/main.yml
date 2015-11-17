@@ -1,0 +1,22 @@
+---
+- name: add rethinkdb repo
+  apt_repository: repo="deb http://download.rethinkdb.com/apt {{ansible_lsb.codename}} main" state=present
+  register: apt_repo
+
+- name: add rethinkdb apt gpg key
+  apt_key: url="http://download.rethinkdb.com/apt/pubkey.gpg"
+  register: apt_gpg
+
+- name: update apt
+  apt: update_cache=yes cache_valid_time=3600
+  when: apt_gpg | changed or apt_repo | changed
+
+- name: install rethinkdb
+  apt: pkg=rethinkdb state=present force=yes
+  register: installed_rethinkdb
+
+- name: Set default rethinkdb config and bind config for cluster
+  template: src={{ masterConfig }}.j2 dest=/etc/rethinkdb/instances.d/instance1.conf owner=root group=root
+
+- name: restart rethinkdb
+  service: name=rethinkdb state=restarted enabled=yes

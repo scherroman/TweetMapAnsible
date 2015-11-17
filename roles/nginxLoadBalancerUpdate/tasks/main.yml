@@ -1,0 +1,12 @@
+---
+- name: Replace Nginx Config
+  template: src={{ nginxConfigUpscale }}.j2 dest=/etc/nginx/nginx.conf owner=root group=root
+
+- name: Replace Default Server Config
+  template: src={{ loadBalancerServer }}.j2 dest=/etc/nginx/sites-available/default owner=root group=root
+
+- name: Enable Load Balancer Config
+  file: src=/etc/nginx/sites-available/default dest=/etc/nginx/sites-enabled/default state=link
+
+- name: Reload Nginx
+  service: name=nginx state=reloaded

@@ -1,0 +1,13 @@
+---
+- name: install pm2 globally
+  npm: name=pm2 state=present global=yes
+  notify:
+    - make pm2 restart on reboot
+
+- name: delete existing pm2 processes if running
+  command: pm2 delete all
+  ignore_errors: True
+
+- name: start pm2 process
+  command: pm2 start /home/ubuntu/NodeTweet/nodeTweet/bin/www --name nodeTweet
+    chdir=/home/ubuntu/NodeTweet/nodeTweet/bin/

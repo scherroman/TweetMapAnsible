@@ -1,0 +1,19 @@
+upstream frontEndServers {
+{% for host in groups['frontEndServers'] %}
+  server {{ host }};
+{% endfor %}
+}
+
+server {
+  listen       80;
+  client_max_body_size 100M;
+
+  location / {
+    proxy_pass http://frontEndServers;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_cache_bypass $http_upgrade;
+  }
+}

@@ -1,0 +1,4 @@
+---
+- name: Start up ssh-agent and add ssh keys
+  shell: eval $(ssh-agent -s)
+  shell: ssh-add

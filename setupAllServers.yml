@@ -1,0 +1,22 @@
+---
+- hosts: localServer
+  roles:
+   - nginxLoadBalancer
+- hosts: frontEndServers
+  roles:
+   - nginxFrontEndServer
+   - git
+   - nodejs
+- hosts: frontEndMasterServer
+  roles:
+   - rethinkdbMaster
+- hosts: frontEndSlaveServers
+  roles:
+   - rethinkdbSlave
+- hosts: frontEndMasterServer
+  tasks:
+   - name: initializeNodeTweetDB
+     command: node /home/ubuntu/NodeTweet/nodeTweet/initializeNodeTweetDB.js
+- hosts: frontEndServers
+  roles:
+   - pm2FrontEnd
