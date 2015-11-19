@@ -1,11 +1,11 @@
 [localServer]
 localhost
 [frontEndMasterServer]
-10.0.0.3
+10.0.0.5
 [frontEndSlaveServers]
-10.0.0.4
-10.0.0.5
+10.0.0.6
+10.0.0.7
 [frontEndServers]
-10.0.0.3
-10.0.0.4
 10.0.0.5
+10.0.0.6
+10.0.0.7
