@@ -1,3 +1,4 @@
 - hosts: localServer
+  connection: local
   roles:
    - sshPrep
