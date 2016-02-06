@@ -109,14 +109,6 @@ Afterwards, enter `localhost:9000` in your browser's search, click on `tables`, 
 
 Where `10.0.0.17` is the private IP of the final destination machine, `130.245.168.146` is the public IP of the MLB, and `xxxx` is the port to connect to (generally this can be changed to 80 or something like 3000, depending on whether or not you are using a reverse proxy and what port your web app is actually running out of)
 
-### System Commands
-- Check performance of CPUs
-    - `top`
-- Check # of CPUs
-    - `lscpu`
-- Check space available on disk
-    - `df -h`
-
 ### Ansible Tips
 - Ansible Syntax Checking 
     - `ansible-playbook --syntax-check nginx.yml`
@@ -133,6 +125,14 @@ Where `10.0.0.17` is the private IP of the final destination machine, `130.245.1
 - durability soft helps
 - increasing CPUs per machine helps
 - more shards helps
+
+### System Commands
+- Check performance of CPUs
+    - `top`
+- Check # of CPUs
+    - `lscpu`
+- Check space available on disk
+    - `df -h`
 
 ## Other Resources
 ### Regular Expression Helper:
