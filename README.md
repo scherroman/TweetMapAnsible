@@ -103,7 +103,7 @@ nginx           soft    nofile          65535
 - Check space available on disk
     - `df -h`
 
-###Access a remote server's RethinkDB web interface
+###Accessing a remote server's RethinkDB web interface
 
 `ssh -L 9000:10.0.0.17:8080 130.245.168.239 -l root`
 
