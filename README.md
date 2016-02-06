@@ -26,9 +26,9 @@ This section details the setup for an MLB server which will communicate with and
 
 ### Generate an SSH Key
 - Generate a new SSH key on the MLB and add its public key to this repository's deploy keys.
-- Also add this key to open nebula so you can use it to ssh to any newly created private machines.
     - `ssh-keygen -t rsa`
     - `cat /root/.ssh/id_rsa.pub`
+- Also add this key to open nebula so you can use it to ssh to any newly created private machines.
 
 ## Setting up the distributed server infrastructure
 This section explains how to use this repository's ansible scripts to setup and maintain an array of generic private servers to build our distributed server infrastructure for TweetMap.
