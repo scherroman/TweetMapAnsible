@@ -44,13 +44,13 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
 ### Ansible Deployment Scripts:
 - **Testing Host Connectability**:
     - `ansible all -m ping`
-- SETUP ALL SERVERS:
+- **Seup All Servers**:
     - `ansible-playbook setupAllServers.yml`
-- UPDATE ALL SERVERS:
+- **Update All Servers**:
     - `ansible-playbook updateAllServers.yml`
-- RESTART WEB APP:
+- **Restart Web App**:
     - `ansible-playbook restartWebApp.yml`
-- RESTART WEB APP HARD:
+- **Restart Web App Hard**:
     - `ansible-playbook restartWebAppHard.yml1
 
 ### Testing Nginx Setup:
