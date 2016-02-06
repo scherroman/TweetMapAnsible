@@ -77,7 +77,7 @@ These scripts are used to deploy and maintain the web app infrastructure for Nod
 
 ### Updating System & Nginx File Limits (optional, not included in scripts)
 
-Copy the text below into the bottom of `/etc/security/limits.conf`
+Paste the text below into the bottom of `/etc/security/limits.conf`
 
 ```
 \# This is added for Open File Limit Increase
