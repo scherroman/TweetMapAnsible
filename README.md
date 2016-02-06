@@ -96,6 +96,7 @@ nginx           soft    nofile          65535
 
 ## Misc Resources
 
+### System Commands
 - Check performance of CPUs
     - `top`
 - Check # of CPUs
