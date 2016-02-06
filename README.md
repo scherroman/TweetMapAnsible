@@ -23,8 +23,7 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
 - Copy config & hosts files from the repo into `/etc/ansible`:
     - `cp -i hosts ..`
     - `cp -i ansible.cfg ..`
-    - Note: The `hosts` file will need to be updated according to the current array of servers being used
-
+    - 
 ### Generate SSH Key
 - Generate a new SSH key on the MLB and add its public key to the github repo's deploy keys.
 - Also add this key to open nebula so you can use it to ssh to any newly created private machines.
@@ -75,7 +74,7 @@ root            soft    nofile          32768
 nginx           hard    nofile          199680
 nginx           soft    nofile          65535
 
-EVERY TIME YOU EXIT AN SSH SESSION AND THEN SSH BACK INTO THE MASTER VM, TO SSH-FORWARD PROPERLY TO THE PRIVATE VMS, YOU MUST START UP SSH-AGENT AGAIN WITH (haven’t been able to automate it without errors):
+WARNING: EVERY TIME YOU SSH BACK INTO THE MASTER VM EXIT AN SSH SESSION AND THEN SSH BACK INTO THE MASTER VM, TO SSH-FORWARD PROPERLY TO THE PRIVATE VMS, YOU MUST START UP SSH-AGENT AGAIN WITH (haven’t been able to automate it without errors):
 Startup ssh-agent:  eval $(ssh-agent -s)
 Add ssh keys to agent:  ssh-add
 
