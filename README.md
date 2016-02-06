@@ -57,7 +57,7 @@ These scripts are used to deploy and maintain the web app infrastructure for Nod
     - `ansible all -m ping`
 - **Setup All Servers**:
     - `ansible-playbook setupAllServers.yml`
-    - Used for initial setup of the MLB and app servers.
+    - Used for initial setup of the MLB and all app servers.
 - **Update All Servers**:
     - `ansible-playbook updateAllServers.yml`
     - Used for deploying new updates for the web app.
