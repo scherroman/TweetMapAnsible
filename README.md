@@ -32,7 +32,7 @@ This section details the setup for an MLB server which will communicate with and
     - cat /root/.ssh/id_rsa.pub
 
 ## Setting up the distributed web app infrastricture
-This section explains how to use the given ansible scripts to setup and maintain an array of generic private servers to build our distributed server infrastructure for TweetMap.
+This section explains how to use this repository's ansible scripts to setup and maintain an array of generic private servers to build our distributed server infrastructure for TweetMap.
 ### Update Hosts File
 - Update the `hosts` file now in `/etc/ansible` to contain a list of your current private App Servers.
     - [localServer]
