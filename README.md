@@ -103,12 +103,12 @@ nginx           soft    nofile          65535
 - Check space available on disk
     - `df -h`
 
-**What helps RethinkDB write more inputs/sec**
+###Helps RethinkDB write more inputs/sec
 - durability soft helps
 - increasing CPUs per machine helps
 - more shards helps
 
-"Tunnelception":
+###"Tunnelception"
 
 ssh -L 9000:10.0.0.17:8080 130.245.168.239 -l root
 
