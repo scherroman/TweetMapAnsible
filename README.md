@@ -3,7 +3,7 @@
 The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula for cloud management.
 
 ## Setting up the public Master Load Balancer (MLB) from scratch:
-### Setup Ansible:
+### Setup Ansible
 - Update cache to be able to find repositories: `sudo apt-get update`
 - Get the "add-apt-repository”: `sudo apt-get install -y software-properties-common`
 - Add Ansible's official repository: `sudo add-apt-repository -y ppa:ansible/ansible`
@@ -11,13 +11,13 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
 - Install Ansible: `sudo apt-get install -y ansible`
 - Find ansible hosts & config file: `cd /etc/ansible`
 
-### Setup Git:
+### Setup Git
 - `sudo apt-get update`
 - `sudo apt-get install git`
 - `git config --global user.name “My Name"`
 - `git config --global user.email “my.email@domain.com"`
 
-### Get the TweetMap Repo:
+### Get the TweetMap Repo
 - Git clone the repo into your `/etc/ansible` folder:
     - `git clone https://github.com/scherroman/TweetMap /etc/ansible/TweetMap`
 - Copy config & hosts files from the repo into the the `/etc/ansible` folder:
