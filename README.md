@@ -32,7 +32,7 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
 
 ## Setting up the distributed web app infrastricture
 ### Update Hosts File
-- Update the `hosts` file now in `/etc/ansible` to contain a list of your current App Servers.
+- Update the `hosts` file now in `/etc/ansible` to contain a list of your current (usually private) App Servers.
     - [localServer]
     - [frontEndServers]
     - [databaseServers]
