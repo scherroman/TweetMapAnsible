@@ -79,6 +79,7 @@ These scripts are used to deploy and maintain the web app infrastructure for Nod
 
 Copy the text below into the bottom of `/etc/security/limits.conf`
 
+```
 \# This is added for Open File Limit Increase
 *               hard    nofile          199680
 *               soft    nofile          65535
@@ -89,6 +90,7 @@ root            soft    nofile          32768
 \# This is added for Nginx User
 nginx           hard    nofile          199680
 nginx           soft    nofile          65535
+```
 
 ## Misc Resources
 
