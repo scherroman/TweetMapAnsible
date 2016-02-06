@@ -15,12 +15,14 @@
     - `git config --global user.name “My Name"`
     - `git config --global user.email “my.email@domain.com"`
 
-3. GIT CLONE nodeAnsible REPO INTO /etc/ansible FOLDER:
-     git clone https://github.com/scherroman/nodeAnsible /etc/ansible/nodeAnsible
-          copy config file & hosts files from nodeAnsible repo into ansible folder
-      cp -i hosts ..
-           cp -i ansible.cfg ..
-          (assuming you are in repo folder)
+3. GIT CLONE nodeAnsible REPO INTO `/etc/ansible` FOLDER:
+    - `git clone https://github.com/scherroman/nodeAnsible /etc/ansible/nodeAnsible`
+    - copy config file & hosts files from nodeAnsible repo into ansible folder
+    ```
+    cp -i hosts ..
+    cp -i ansible.cfg ..
+    ```
+    (assuming you are in the `nodeAnsible` repo folder)
 
 4. GENERATE SSH KEY ON MASTER SERVER AND ADD PUBLIC KEY TO GITHUB nodeWiki DEPLOY KEYS (AS WELL AS OPEN NEBULA SO YOU CAN USE TO SSH TO PRIVATE MACHINES AND ACCESS APP REPO):
      ssh-keygen -t rsa
