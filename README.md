@@ -54,7 +54,7 @@ Used for Ansible's SSH forwarding
 ### Ansible Deployment Scripts:
 These scripts are used to deploy and maintain the web app infrastructure for NodeTweet across an arbitrary array of private servers defined in the `hosts` file located in `/etc/ansible`.
 
-- **Test hosts for Connectability**:
+- **Test hosts for Connectivity**:
     - `ansible all -m ping`
 - **Setup All Servers**:
     - `ansible-playbook setupAllServers.yml`
