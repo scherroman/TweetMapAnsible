@@ -32,9 +32,9 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
     - cat /root/.ssh/id_rsa.pub
     
 
-5. SETUP SSH AGENT
-Startup ssh-agent:  eval $(ssh-agent -s)
-Add ssh keys to agent:  ssh-add
+### SETUP SSH AGENT
+- Startup ssh-agent: `eval $(ssh-agent -s)`
+- Add ssh keys to agent: `ssh-add`
 
 5. MAKE SURE HOST FILE CONTAINS LIST OF CURRENT VM IP ADDRESSES UNDER CORRECT GROUPS
      [localServer]
