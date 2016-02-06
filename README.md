@@ -124,7 +124,7 @@ Where `10.0.0.17` is the private IP of the final destination machine, `130.245.1
  
 **Note**: Use `connection: local` in Ansible playbooks when intending to run tasks locally on the current server.
 
-###Helps RethinkDB write more inputs/sec
+###What helps RethinkDB write more inputs/sec?
 - durability soft helps
 - increasing CPUs per machine helps
 - more shards helps
