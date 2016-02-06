@@ -42,9 +42,9 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
     - [databaseServers]
 
 ### Ansible Deployment Scripts:
-     Testing all desired server ssh connections for hosts defined in hosts file:
+- Testing all desired server ssh connections for hosts defined in hosts file:
                ansible all -m ping
-SETUP ALL SERVERS:
+- SETUP ALL SERVERS:
      ansible-playbook setupAllServers.yml
 UPDATE ALL SERVERS:
      ansible-playbook updateAllServers.yml
