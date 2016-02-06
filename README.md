@@ -42,21 +42,20 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
     - [databaseServers]
 
 ### Ansible Deployment Scripts:
-- Testing all desired server ssh connections for hosts defined in hosts file:
-               ansible all -m ping
+- TESTING HOST CONNECTABILITY:
+    - `ansible all -m ping`
 - SETUP ALL SERVERS:
-     ansible-playbook setupAllServers.yml
-UPDATE ALL SERVERS:
-     ansible-playbook updateAllServers.yml
-RESTART WEB APP:
-     ansible-playbook restartWebApp.yml
-RESTART WEB APP HARD:
-     ansible-playbook restartWebAppHard.yml
+    - `ansible-playbook setupAllServers.yml`
+- UPDATE ALL SERVERS:
+    - `ansible-playbook updateAllServers.yml`
+- RESTART WEB APP:
+    - `ansible-playbook restartWebApp.yml`
+- RESTART WEB APP HARD:
+    - `ansible-playbook restartWebAppHard.yml1
 
-7. TESTING THAT NGINX IS SETUP PROPERLY:
-     ssh 10.0.0.xx
-sudo service nginx configtest
-if [FAIL], check nginx error logs
+### TESTING NGINX SETUP:
+- sudo service nginx configtest
+    - (if [FAIL], check nginx error logs)
 
 8. SET SYSTEM & NGINX FILE LIMITS
 cd /etc/security/limits.conf copy text below into bottom of file
