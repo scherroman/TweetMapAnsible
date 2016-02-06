@@ -18,9 +18,9 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
 - `git config --global user.email “my.email@domain.com"`
 
 ### Get the TweetMap Repo
-- Git clone the repo into your `/etc/ansible` folder:
+- Git clone the repo into `/etc/ansible`:
     - `git clone https://github.com/scherroman/TweetMap /etc/ansible/TweetMap`
-- Copy config & hosts files from the repo into the the `/etc/ansible` folder:
+- Copy config & hosts files from the repo into `/etc/ansible`:
     - `cp -i hosts ..`
     - `cp -i ansible.cfg ..`
     - Note: The `hosts` file will need to be updated according to the current array of servers being used
@@ -31,17 +31,17 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
     - ssh-keygen -t rsa
     - cat /root/.ssh/id_rsa.pub
     
-
-### SETUP SSH AGENT
+### Setup SSH Agent
 - Startup ssh-agent: `eval $(ssh-agent -s)`
 - Add ssh keys to agent: `ssh-add`
 
-5. MAKE SURE HOST FILE CONTAINS LIST OF CURRENT VM IP ADDRESSES UNDER CORRECT GROUPS
-     [localServer]
-     [frontEndServers]
-     [databaseServers]
+### Update Hosts File
+- Make sure to update the `hosts` file now in `/etc/ansible` to contain a list of your current servers.
+    - [localServer]
+    - [frontEndServers]
+    - [databaseServers]
 
-6. ANISIBLE COMMANDS TO DEPLOY APP:
+### Ansible Deployment Scripts:
      Testing all desired server ssh connections for hosts defined in hosts file:
                ansible all -m ping
 SETUP ALL SERVERS:
