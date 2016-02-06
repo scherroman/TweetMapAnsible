@@ -1,8 +1,9 @@
 # NodeTweetAnsible
 
-The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula for cloud management.
+The setup instructions below assume a server running Ubuntu-14.04, as well as Open Nebula for cloud management.
 
 ## Setting up the public Master Load Balancer (MLB):
+This section details the setup for an MLB server which will communicate with and control an array of private servers.
 ### Setup Ansible
 - Update cache to be able to find repositories: `sudo apt-get update`
 - Get the "add-apt-repository”: `sudo apt-get install -y software-properties-common`
@@ -31,8 +32,9 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
     - cat /root/.ssh/id_rsa.pub
 
 ## Setting up the distributed web app infrastricture
+This section explains how to setup and interact with an array of generic private servers which will become our app servers.
 ### Update Hosts File
-- Update the `hosts` file now in `/etc/ansible` to contain a list of your current (usually private) App Servers.
+- Update the `hosts` file now in `/etc/ansible` to contain a list of your current private App Servers.
     - [localServer]
     - [frontEndServers]
     - [databaseServers]
@@ -49,7 +51,7 @@ Used for Ansible's SSH forwarding
 **Note**: It sometimes takes a couple of minutes for ssh-agent forwarding to start working properly.
 
 ### Ansible Deployment Scripts:
-These scripts are used to deploy and maintain the web app infrastructure for NodeTweet across an arbitrary array of (usually private) servers defined in the `hosts` file located in `/etc/ansible`.
+These scripts are used to deploy and maintain the web app infrastructure for NodeTweet across an arbitrary array of private servers defined in the `hosts` file located in `/etc/ansible`.
 
 - **Test hosts for Connectability**:
     - `ansible all -m ping`
@@ -65,11 +67,13 @@ These scripts are used to deploy and maintain the web app infrastructure for Nod
 
 **Note**: Unlike Bash scipts, Ansible scripts are idempotent, meaning they may safely be run as many times as needed to reach the desired state.
 
+**Note**: Use `connection: local` in Ansible playbooks when intending to run tasks locally on the current server
+
 ### Testing Nginx Setup:
 - `sudo service nginx configtest`
     - if [FAIL], check nginx error logs
 
-### Updating System & Nginx File Limits (optional)
+### Updating System & Nginx File Limits (optional, not included in scripts)
 cd /etc/security/limits.conf copy text below into bottom of file
 \# This is added for Open File Limit Increase
 *               hard    nofile          199680
@@ -82,7 +86,6 @@ root            soft    nofile          32768
 nginx           hard    nofile          199680
 nginx           soft    nofile          65535
 
-***USE ‘connection: local' IN PLAYBOOKS WHEN RUNNING TASKS ON LOCAL SERVER
 
 CHECKING LOAD BALANCER NGINX SERVER ACCESS & ERROR LOGS:
 nano /var/log/nginx/access.log
