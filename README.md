@@ -58,7 +58,7 @@ Note: Unlike Bash scipts, Ansible scripts are idempotent, meaning they may safel
     - `ansible-playbook restartWebAppHard.yml1
 
 ### Testing Nginx Setup:
-- sudo service nginx configtest
+- `sudo service nginx configtest`
     - (if [FAIL], check nginx error logs)
 
 ### Updating System & Nginx File Limits (optional)
