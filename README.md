@@ -1,6 +1,6 @@
 # NodeTweetAnsible
 
-The setup instructions below assume a server running Ubuntu-14.04, as well as Open Nebula for cloud management.
+The setup instructions below assume a server running Ubuntu-14.04 through Open Nebula.
 
 ## Setting up a public Master Load Balancer (MLB):
 This section details the setup for an MLB server which will communicate with and control an array of private servers.
