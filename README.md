@@ -30,7 +30,7 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
     - ssh-keygen -t rsa
     - cat /root/.ssh/id_rsa.pub
 
-## Setting up the distributed server infrastricture
+## Setting up the distributed web app infrastricture
 ### Update Hosts File
 - Update the `hosts` file now in `/etc/ansible` to contain a list of your current App Servers.
     - [localServer]
