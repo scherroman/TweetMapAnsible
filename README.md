@@ -42,6 +42,7 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
     - [databaseServers]
 
 ### Ansible Deployment Scripts:
+These scripts are used to 
 - **Testing Host Connectability**:
     - `ansible all -m ping`
 - **Setup All Servers**:
@@ -58,16 +59,16 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
 - sudo service nginx configtest
     - (if [FAIL], check nginx error logs)
 
-8. SET SYSTEM & NGINX FILE LIMITS
+### Updating System & Nginx File Limits (optional)
 cd /etc/security/limits.conf copy text below into bottom of file
-# This is added for Open File Limit Increase
+\# This is added for Open File Limit Increase
 *               hard    nofile          199680
 *               soft    nofile          65535
 
 root            hard    nofile          65536
 root            soft    nofile          32768
 
-# This is added for Nginx User
+\# This is added for Nginx User
 nginx           hard    nofile          199680
 nginx           soft    nofile          65535
 
