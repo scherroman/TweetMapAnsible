@@ -96,11 +96,11 @@ nginx           soft    nofile          65535
 
 ## Misc Resources
 
-- CHECK PERFORMANCE OF CPUS ON MACHINES
+- Check performance of CPUs
     - `top`
-- CHECK NUMBER OF CPUs
+- Check # of CPUs
     - `lscpu`
-- CHECK SPACE AVAILABLE ON DISK
+- Check space available on disk
     - `df -h`
 
 WHAT HELPS RETHINKDB WRITE MORE INPUTS/SEC
