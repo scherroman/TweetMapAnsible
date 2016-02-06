@@ -114,14 +114,15 @@ Where `10.0.0.17` is the private IP of the final destination machine and `130.24
 
 Afterwards, enter `localhost:9000` in your browser's search, click on `tables`, select the table to shard, click on `reconfigure` and change as pleased.
 
-Ansible:
-Ansible Syntax Checking: ansible-playbook --syntax-check nginx.yml
+### Ansible Tips:
+- Ansible Syntax Checking 
+    - `ansible-playbook --syntax-check nginx.yml`
 
-Creating an Ansible Role:
-    mkdir -p roles/xxxx
-   cd roles/xxxx
-  mkdir files handlers meta templates tasks vars
-  mkdir handlers/main.yml meta/main.yml tasks/main.yml vars/main.yml
+- Creating an Ansible Role
+    - `mkdir -p roles/xxxx`
+    - `cd roles/xxxx`
+    - `mkdir files handlers meta templates tasks vars`
+    - `mkdir handlers/main.yml meta/main.yml tasks/main.yml vars/main.yml`
  
 **Note**: Use `connection: local` in Ansible playbooks when intending to run tasks locally on the current server
 
