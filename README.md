@@ -81,7 +81,7 @@ These scripts are used to deploy and maintain the web app infrastructure for Nod
 
 Can be used to increase traffic load capabilities.
 
-Paste the text below into the bottom of `/etc/security/limits.conf`
+Paste the text below into the bottom of `/etc/security/limits.conf`.
 
 ```
 \# This is added for Open File Limit Increase
@@ -110,7 +110,7 @@ Afterwards, enter `localhost:9000` into your browser's search, click on `tables`
 
 - `ssh -L 9000:10.0.0.3:xxxx 130.245.168.239 -l root`
 
-Where `10.0.0.17` is the private IP of the final destination machine, `130.245.168.146` is the public IP of the MLB, and `xxxx` is the port to connect to (generally this can be changed to 80 or something like 3000, depending on whether or not you are using a reverse proxy and what port your web app is actually running out of)
+Where `10.0.0.17` is the private IP of the final destination machine, `130.245.168.146` is the public IP of the MLB, and `xxxx` is the port to connect to (generally this can be changed to 80 or something like 3000, depending on whether or not you are using a reverse proxy and what port your web app is actually running out of).
 
 ### Ansible Tips
 - Ansible Syntax Checking 
@@ -122,7 +122,7 @@ Where `10.0.0.17` is the private IP of the final destination machine, `130.245.1
     - `mkdir files handlers meta templates tasks vars`
     - `mkdir handlers/main.yml meta/main.yml tasks/main.yml vars/main.yml`
  
-**Note**: Use `connection: local` in Ansible playbooks when intending to run tasks locally on the current server
+**Note**: Use `connection: local` in Ansible playbooks when intending to run tasks locally on the current server.
 
 ###Helps RethinkDB write more inputs/sec
 - durability soft helps
