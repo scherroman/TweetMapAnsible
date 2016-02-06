@@ -24,23 +24,23 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
     - `cp -i hosts ..`
     - `cp -i ansible.cfg ..`
 
+### Generate SSH Key
+- Generate a new SSH key on the MLB and add its public key to the github repo's deploy keys.
+- Also add this key to open nebula so you can use it to ssh to any newly created private machines.
+    - ssh-keygen -t rsa
+    - cat /root/.ssh/id_rsa.pub
+
+## Setting up the private App Servers (AS)
 ### Update Hosts File
 - Make sure to update the `hosts` file now in `/etc/ansible` to contain a list of your current servers.
     - [localServer]
     - [frontEndServers]
     - [databaseServers]
 
-### Generate SSH Key
-- Generate a new SSH key on the MLB and add its public key to the github repo's deploy keys.
-- Also add this key to open nebula so you can use it to ssh to any newly created private machines.
-    - ssh-keygen -t rsa
-    - cat /root/.ssh/id_rsa.pub
-    
 ### Setup SSH Agent
 - Startup ssh-agent: `eval $(ssh-agent -s)`
 - Add ssh keys to agent: `ssh-add`
 
-## Setting up the private App Servers (AS)
 ### Ansible Deployment Scripts:
 These scripts are used to deploy and maintain the web app infrastructure for NodeTweet across an arbitrary array of (usually private) servers defined in the `hosts` file located in `/etc/ansible`.
 
