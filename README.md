@@ -129,7 +129,7 @@ ssh -L 9000:10.0.0.3:8080 130.245.168.239 -l root
 
 where 10.0.0.17 is the private IP of the final destination machine, 130.245.168.146 is the IP of the load balancer and 8080 is the port to connect to (this can be changed to either 80 or 3000)
 
-## Other resources
+## Other Resources
 ### Regular Expression Helper:
 
 https://regex101.com/#javascript
