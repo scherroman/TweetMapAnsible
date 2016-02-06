@@ -95,14 +95,6 @@ nginx           soft    nofile          65535
 
 ## Misc Resources
 
-### System Commands
-- Check performance of CPUs
-    - `top`
-- Check # of CPUs
-    - `lscpu`
-- Check space available on disk
-    - `df -h`
-
 ###Accessing a remote server's RethinkDB web interface
 
 `ssh -L 9000:10.0.0.17:8080 130.245.168.239 -l root`
@@ -116,6 +108,14 @@ Afterwards, enter `localhost:9000` in your browser's search, click on `tables`, 
 - `ssh -L 9000:10.0.0.3:xxxx 130.245.168.239 -l root`
 
 Where `10.0.0.17` is the private IP of the final destination machine, `130.245.168.146` is the public IP of the MLB, and `xxxx` is the port to connect to (generally this can be changed to 80 or something like 3000, depending on whether or not you are using a reverse proxy and what port your web app is actually running out of)
+
+### System Commands
+- Check performance of CPUs
+    - `top`
+- Check # of CPUs
+    - `lscpu`
+- Check space available on disk
+    - `df -h`
 
 ### Ansible Tips
 - Ansible Syntax Checking 
