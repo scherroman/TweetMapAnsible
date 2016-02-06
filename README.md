@@ -2,7 +2,7 @@
 
 The setup instructions below assume a server running Ubuntu-14.04 through Open Nebula.
 
-## Setting up a public Master Load Balancer (MLB):
+## Setting up a public Master Load Balancer (MLB)
 This section details the setup for an MLB server which will communicate with and control an array of private app servers.
 ### Setup Ansible
 - Update cache to be able to find repositories: `sudo apt-get update`
