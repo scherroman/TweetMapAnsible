@@ -60,7 +60,7 @@ These scripts are used to deploy and maintain the web app infrastructure for Nod
     - Used for initial setup of the MLB and all app servers.
 - **Update All Servers**:
     - `ansible-playbook updateAllServers.yml`
-    - Used for deploying new updates for the web app.
+    - Used for deploying new updates to the web app.
 - **Restart Web App**:
     - `ansible-playbook restartWebApp.yml`
     - Used to restart all node.js web app servers.
