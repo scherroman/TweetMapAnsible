@@ -1,6 +1,6 @@
 # NodeTweetAnsible
 
-## Starting up brand new master Load Balancer server from scratch:
+## Setting up the Master Load Balancer from scratch:
 1. SETUP ANSIBLE:
            Update cache to be able to find repositories: apt-get update
            Get the "add-apt-repository”: sudo apt-get install -y software-properties-common
