@@ -42,7 +42,7 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
     - [databaseServers]
 
 ### Ansible Deployment Scripts:
-- TESTING HOST CONNECTABILITY:
+- **Testing Host Connectability**:
     - `ansible all -m ping`
 - SETUP ALL SERVERS:
     - `ansible-playbook setupAllServers.yml`
