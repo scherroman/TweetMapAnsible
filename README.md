@@ -1,5 +1,7 @@
 # NodeTweetAnsible
 
+Note: The below setup assumes a server running Ubuntu-14.04.
+
 ## Setting up the Master Load Balancer from scratch:
 1. SETUP ANSIBLE:
     - Update cache to be able to find repositories: `sudo apt-get update`
