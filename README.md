@@ -24,7 +24,8 @@ The below setup assumes a server running Ubuntu-14.04.
     - `cp -i hosts ..`
     - `cp -i ansible.cfg ..`
 
-4. GENERATE SSH KEY ON MLB AND ADD PUBLIC KEY TO GITHUB nodeWiki DEPLOY KEYS (AS WELL AS OPEN NEBULA SO YOU CAN USE TO SSH TO PRIVATE MACHINES AND ACCESS APP REPO):
+### Generate SSH Key
+5. GENERATE A NEW SSH KEY ON THE MLB AND ADD THE PUBLIC KEY TO GITHUB nodeWiki'S DEPLOY KEYS (AS WELL AS OPEN NEBULA SO YOU CAN USE TO SSH TO PRIVATE MACHINES AND ACCESS APP REPO):
      ssh-keygen -t rsa
      cat /root/.ssh/id_rsa.pub
 
