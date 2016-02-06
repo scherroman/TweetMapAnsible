@@ -135,10 +135,10 @@ Where `10.0.0.17` is the private IP of the final destination machine, `130.245.1
     - `df -h`
 
 ## Other Resources
-### Regular Expression Helper:
+### Regular Expression Helper
 
 https://regex101.com/#javascript
 
-### cURL to Node.js converter (not 100% accurate but almost there):
+### cURL to Node.js converter (not 100% accurate but almost there)
 
 http://curl.trillworks.com/#node
