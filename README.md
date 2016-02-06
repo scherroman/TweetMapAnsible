@@ -2,7 +2,7 @@
 
 The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula for cloud management.
 
-## Setting up the public Master Load Balancer (MLB) from scratch:
+## Setting up the public Master Load Balancer (MLB):
 ### Setup Ansible
 - Update cache to be able to find repositories: `sudo apt-get update`
 - Get the "add-apt-repository”: `sudo apt-get install -y software-properties-common`
@@ -40,6 +40,7 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
 - Startup ssh-agent: `eval $(ssh-agent -s)`
 - Add ssh keys to agent: `ssh-add`
 
+## Setting up the private App Servers (AS)
 ### Ansible Deployment Scripts:
 These scripts are used to deploy and maintain the web app infrastructure for NodeTweet across an arbitrary array of (usually private) servers defined in the `hosts` file located in `/etc/ansible`.
 
@@ -55,7 +56,7 @@ These scripts are used to deploy and maintain the web app infrastructure for Nod
 - **Restart Web App Hard**:
     - `ansible-playbook restartWebAppHard.yml1
 
-**Warning**: Every time you ssh back into the MLB, to allow Ansible to ssh-forward properly to its hosts when running scripts, you must start up ssh-agent again with: 
+**Warning**: Every time you ssh back into the MLB, to allow Ansible to ssh-forward properly to its hosts, you must start up ssh-agent again with: 
 - Startup ssh-agent: `eval $(ssh-agent -s)`
 - Add ssh keys to agent: `ssh-add`
 
