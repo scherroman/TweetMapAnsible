@@ -1,6 +1,6 @@
 # NodeTweetAnsible
 
-The setup instructions below assume generic linux servers running Ubuntu-14.04 managed through Open Nebula.
+The setup instructions below assume generic linux servers running Ubuntu-14.04 and managed through Open Nebula.
 
 ## Setting up a public Master Load Balancer (MLB)
 This section details the setup for an MLB server which will communicate with and control an array of private app servers.
