@@ -4,12 +4,12 @@ The below setup assumes a server running Ubuntu-14.04.
 
 ## Setting up the Master Load Balancer (MLB) from scratch:
 ### Setup Ansible:
-    - Update cache to be able to find repositories: `sudo apt-get update`
-    - Get the "add-apt-repository”: `sudo apt-get install -y software-properties-common`
-    - Add Ansible's official repository: `sudo add-apt-repository -y ppa:ansible/ansible`
-    - Update repositories: `apt-get update`
-    - Install Ansible: `sudo apt-get install -y ansible`
-    - Find ansible hosts & config file: `cd /etc/ansible`
+- Update cache to be able to find repositories: `sudo apt-get update`
+- Get the "add-apt-repository”: `sudo apt-get install -y software-properties-common`
+- Add Ansible's official repository: `sudo add-apt-repository -y ppa:ansible/ansible`
+- Update repositories: `apt-get update`
+- Install Ansible: `sudo apt-get install -y ansible`
+- Find ansible hosts & config file: `cd /etc/ansible`
 
 2. SETUP GIT:
     - `sudo apt-get update`
