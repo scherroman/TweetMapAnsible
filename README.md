@@ -53,7 +53,7 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
 - RESTART WEB APP HARD:
     - `ansible-playbook restartWebAppHard.yml1
 
-### TESTING NGINX SETUP:
+### Testing Nginx Setup:
 - sudo service nginx configtest
     - (if [FAIL], check nginx error logs)
 
