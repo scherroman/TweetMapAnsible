@@ -23,7 +23,7 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
 - Copy config & hosts files from the repo into the the `/etc/ansible` folder:
     - `cp -i hosts ..`
     - `cp -i ansible.cfg ..`
-    - Note: The `hosts` file will need to be nupdated according to the current array of servers being used
+    - Note: The `hosts` file will need to be updated according to the current array of servers being used
 
 ### Generate SSH Key
 - Generate a new SSH key on the MLB and add its public key to the github repo's deploy keys.
