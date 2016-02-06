@@ -10,10 +10,10 @@
     - Find ansible hosts & config file: `cd /etc/ansible`
 
 2. SETUP GIT:
-    - sudo apt-get update
-    - sudo apt-get install git
-    - git config --global user.name “My Name"
-    - git config --global user.email “my.email@domain.com"
+    - `sudo apt-get update`
+    - `sudo apt-get install git`
+    - `git config --global user.name “My Name"`
+    - `git config --global user.email “my.email@domain.com"`
 
 3. GIT CLONE nodeAnsible REPO INTO /etc/ansible FOLDER:
      git clone https://github.com/scherroman/nodeAnsible /etc/ansible/nodeAnsible
