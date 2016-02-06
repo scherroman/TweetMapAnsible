@@ -44,7 +44,6 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
 ### Ansible Deployment Scripts:
 These scripts are used to deploy and maintain the web app infrastructure for NodeTweet across an arbitrary array of (usually private) servers defined in the `hosts` file located in `/etc/ansible`.
 
-Note: Unlike Bash scipts, Ansible scripts are idempotent, meaning they may safely be run as many times as needed to reach the desired state.
 - **Test hosts for Connectability**:
     - `ansible all -m ping`
 - **Setup All Servers**:
@@ -56,6 +55,8 @@ Note: Unlike Bash scipts, Ansible scripts are idempotent, meaning they may safel
     - `ansible-playbook restartWebApp.yml`
 - **Restart Web App Hard**:
     - `ansible-playbook restartWebAppHard.yml1
+
+Note: Unlike Bash scipts, Ansible scripts are idempotent, meaning they may safely be run as many times as needed to reach the desired state.
 
 ### Testing Nginx Setup:
 - `sudo service nginx configtest`
