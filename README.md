@@ -106,13 +106,13 @@ nginx           soft    nofile          65535
 
 ###"Tunnelception"
 
-Used to access rethinkDB's web interface for an instance running on a private server from your personal computer
+Used to access rethinkDB's web interface for an instance running on a remote server.
 
 `ssh -L 9000:10.0.0.17:8080 130.245.168.239 -l root`
 
 Where `10.0.0.17` is the private IP of the final destination machine and `130.245.168.146` is the public IP of the MLB.
 
-Afterwards, enter `localhost:9000` in your browser's search, click on `tables`, select the table to shard, click on "reconfigure" and change as pleased.
+Afterwards, enter `localhost:9000` in your browser's search, click on `tables`, select the table to shard, click on `reconfigure` and change as pleased.
 
 Ansible:
 Ansible Syntax Checking: ansible-playbook --syntax-check nginx.yml
