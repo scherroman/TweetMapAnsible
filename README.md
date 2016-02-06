@@ -32,7 +32,7 @@ This section details the setup for an MLB server which will communicate with and
     - cat /root/.ssh/id_rsa.pub
 
 ## Setting up the distributed web app infrastricture
-This section explains how to setup and interact with an array of generic private servers which will become our app servers.
+This section explains how to use the given ansible scripts to setup and interact with an array of generic private servers which will become our app servers.
 ### Update Hosts File
 - Update the `hosts` file now in `/etc/ansible` to contain a list of your current private App Servers.
     - [localServer]
@@ -67,11 +67,12 @@ These scripts are used to deploy and maintain the web app infrastructure for Nod
 
 **Note**: Unlike Bash scipts, Ansible scripts are idempotent, meaning they may safely be run as many times as needed to reach the desired state.
 
-**Note**: Use `connection: local` in Ansible playbooks when intending to run tasks locally on the current server
-
 ### Testing Nginx Setup:
 - `sudo service nginx configtest`
     - if [FAIL], check nginx error logs
+- Checking nginx server access & error logs:
+    - nano /var/log/nginx/access.log
+    - nano /var/log/nginx/error.log
 
 ### Updating System & Nginx File Limits (optional, not included in scripts)
 cd /etc/security/limits.conf copy text below into bottom of file
@@ -86,17 +87,14 @@ root            soft    nofile          32768
 nginx           hard    nofile          199680
 nginx           soft    nofile          65535
 
+## Misc Resources
 
-CHECKING LOAD BALANCER NGINX SERVER ACCESS & ERROR LOGS:
-nano /var/log/nginx/access.log
-nano /var/log/nginx/error.log
-
-CHECK PERFORMANCE OF CPUS ON MACHINES
-top
-CHECK NUMBER OF CPUs
-lscpu
-CHECK SPACE AVAILABLE ON DISK
-df -h
+- CHECK PERFORMANCE OF CPUS ON MACHINES
+    - `top`
+- CHECK NUMBER OF CPUs
+    - `lscpu`
+- CHECK SPACE AVAILABLE ON DISK
+    - `df -h`
 
 WHAT HELPS RETHINKDB WRITE MORE INPUTS/SEC
 - durability soft helps
@@ -122,6 +120,8 @@ Creating an Ansible Role:
    cd roles/xxxx
   mkdir files handlers meta templates tasks vars
   mkdir handlers/main.yml meta/main.yml tasks/main.yml vars/main.yml
+ 
+**Note**: Use `connection: local` in Ansible playbooks when intending to run tasks locally on the current server
 
 Directly tunneling to localhost:80 or localhost:3000
 
