@@ -2,12 +2,12 @@
 
 ## Setting up the Master Load Balancer from scratch:
 1. SETUP ANSIBLE:
-           Update cache to be able to find repositories: apt-get update
-           Get the "add-apt-repository”: sudo apt-get install -y software-properties-common
-           Add Ansible's official repository: sudo add-apt-repository -y ppa:ansible/ansible
-           Update repositories: apt-get update
-           Install Ansible: sudo apt-get install -y ansible
-           Find ansible hosts & config file  cd /etc/ansible
+    - Update cache to be able to find repositories: apt-get update
+    - Get the "add-apt-repository”: sudo apt-get install -y software-properties-common
+    - Add Ansible's official repository: sudo add-apt-repository -y ppa:ansible/ansible
+    - Update repositories: apt-get update
+    - Install Ansible: sudo apt-get install -y ansible
+    - Find ansible hosts & config file  cd /etc/ansible
 
 2. SETUP GIT:
      sudo apt-get update
