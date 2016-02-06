@@ -24,7 +24,7 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
     - `cp -i hosts ..`
     - `cp -i ansible.cfg ..`
 
-### Generate SSH Key
+### Generate an SSH Key
 - Generate a new SSH key on the MLB and add its public key to the github repo's deploy keys.
 - Also add this key to open nebula so you can use it to ssh to any newly created private machines.
     - ssh-keygen -t rsa
