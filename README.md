@@ -36,8 +36,9 @@ This section explains how to use this repository's ansible scripts to setup and 
 ### Update Hosts File
 - Update the `hosts` file now in `/etc/ansible` to contain a list of your current private App Servers.
     - [localServer]
+    - [frontEndMasterServer]
+    - [frontEndSlaveServers]
     - [frontEndServers]
-    - [databaseServers]
 
 ### Setup SSH Agent
 Used for Ansible's SSH forwarding
