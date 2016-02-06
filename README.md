@@ -25,7 +25,7 @@ This section details the setup for an MLB server which will communicate with and
     - `cp -i ansible.cfg ..`
 
 ### Generate an SSH Key
-- Generate a new SSH key on the MLB and add its public key to the github repo's deploy keys.
+- Generate a new SSH key on the MLB and add its public key to this repository's deploy keys.
 - Also add this key to open nebula so you can use it to ssh to any newly created private machines.
     - ssh-keygen -t rsa
     - cat /root/.ssh/id_rsa.pub
