@@ -55,6 +55,12 @@ These scripts are used to deploy and maintain the web app infrastructure for Nod
 - **Restart Web App Hard**:
     - `ansible-playbook restartWebAppHard.yml1
 
+Warning: EVERY TIME YOU SSH BACK INTO THE MASTER VM EXIT AN SSH SESSION AND THEN SSH BACK INTO THE MASTER VM, TO SSH-FORWARD PROPERLY TO THE PRIVATE VMS, YOU MUST START UP SSH-AGENT AGAIN WITH (haven’t been able to automate it without errors):
+Startup ssh-agent:  eval $(ssh-agent -s)
+Add ssh keys to agent:  ssh-add
+
+Note: SOMETIMES TAKES A COUPLE OF MINUTES FOR SSH-AGENT FORWARDING TO START WORKING PROPERLY.
+
 Note: Unlike Bash scipts, Ansible scripts are idempotent, meaning they may safely be run as many times as needed to reach the desired state.
 
 ### Testing Nginx Setup:
@@ -73,12 +79,6 @@ root            soft    nofile          32768
 \# This is added for Nginx User
 nginx           hard    nofile          199680
 nginx           soft    nofile          65535
-
-WARNING: EVERY TIME YOU SSH BACK INTO THE MASTER VM EXIT AN SSH SESSION AND THEN SSH BACK INTO THE MASTER VM, TO SSH-FORWARD PROPERLY TO THE PRIVATE VMS, YOU MUST START UP SSH-AGENT AGAIN WITH (haven’t been able to automate it without errors):
-Startup ssh-agent:  eval $(ssh-agent -s)
-Add ssh keys to agent:  ssh-add
-
-NOTE: SOMETIMES TAKES A COUPLE OF MINUTES FOR SSH-AGENT FORWARDING TO START WORKING PROPERLY.
 
 ***USE ‘connection: local' IN PLAYBOOKS WHEN RUNNING TASKS ON LOCAL SERVER
 
