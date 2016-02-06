@@ -11,18 +11,18 @@ The below setup assumes a server running Ubuntu-14.04.
 - Install Ansible: `sudo apt-get install -y ansible`
 - Find ansible hosts & config file: `cd /etc/ansible`
 
-2. SETUP GIT:
-    - `sudo apt-get update`
-    - `sudo apt-get install git`
-    - `git config --global user.name “My Name"`
-    - `git config --global user.email “my.email@domain.com"`
+### SETUP GIT:
+- `sudo apt-get update`
+- `sudo apt-get install git`
+- `git config --global user.name “My Name"`
+- `git config --global user.email “my.email@domain.com"`
 
-3. GET THE TweetMap REPO:
-    - Git clone the repo into your `/etc/ansible` folder:
-        - `git clone https://github.com/scherroman/TweetMap /etc/ansible/TweetMap`
-    - Copy config & hosts files from the repo into the the `/etc/ansible` folder:
-        - `cp -i hosts ..`
-        - `cp -i ansible.cfg ..`
+### GET THE TweetMap REPO:
+- Git clone the repo into your `/etc/ansible` folder:
+    - `git clone https://github.com/scherroman/TweetMap /etc/ansible/TweetMap`
+- Copy config & hosts files from the repo into the the `/etc/ansible` folder:
+    - `cp -i hosts ..`
+    - `cp -i ansible.cfg ..`
 
 4. GENERATE SSH KEY ON MLB AND ADD PUBLIC KEY TO GITHUB nodeWiki DEPLOY KEYS (AS WELL AS OPEN NEBULA SO YOU CAN USE TO SSH TO PRIVATE MACHINES AND ACCESS APP REPO):
      ssh-keygen -t rsa
