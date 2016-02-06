@@ -38,8 +38,15 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
     - [databaseServers]
 
 ### Setup SSH Agent
+Used for Ansible's SSH forwarding
 - Startup ssh-agent: `eval $(ssh-agent -s)`
 - Add ssh keys to agent: `ssh-add`
+
+**Warning**: Every time you ssh back into the MLB, to allow Ansible to ssh-forward properly to its hosts, you must start up ssh-agent again with: 
+- Startup ssh-agent: `eval $(ssh-agent -s)`
+- Add ssh keys to agent: `ssh-add`
+
+**Note**: It sometimes takes a couple of minutes for ssh-agent forwarding to start working properly.
 
 ### Ansible Deployment Scripts:
 These scripts are used to deploy and maintain the web app infrastructure for NodeTweet across an arbitrary array of (usually private) servers defined in the `hosts` file located in `/etc/ansible`.
@@ -55,12 +62,6 @@ These scripts are used to deploy and maintain the web app infrastructure for Nod
     - `ansible-playbook restartWebApp.yml`
 - **Restart Web App Hard**:
     - `ansible-playbook restartWebAppHard.yml1
-
-**Warning**: Every time you ssh back into the MLB, to allow Ansible to ssh-forward properly to its hosts, you must start up ssh-agent again with: 
-- Startup ssh-agent: `eval $(ssh-agent -s)`
-- Add ssh keys to agent: `ssh-add`
-
-**Note**: It sometimes takes a couple of minutes for ssh-agent forwarding to start working properly.
 
 **Note**: Unlike Bash scipts, Ansible scripts are idempotent, meaning they may safely be run as many times as needed to reach the desired state.
 
