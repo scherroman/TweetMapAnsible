@@ -17,7 +17,7 @@ The below setup assumes a server running Ubuntu-14.04.
 - `git config --global user.name “My Name"`
 - `git config --global user.email “my.email@domain.com"`
 
-### Get The TweetMap Repo:
+### Get the TweetMap Repo:
 - Git clone the repo into your `/etc/ansible` folder:
     - `git clone https://github.com/scherroman/TweetMap /etc/ansible/TweetMap`
 - Copy config & hosts files from the repo into the the `/etc/ansible` folder:
