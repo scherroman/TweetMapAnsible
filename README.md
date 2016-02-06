@@ -2,7 +2,7 @@
 
 The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula for cloud management.
 
-## Setting up the Master Load Balancer (MLB) from scratch:
+## Setting up the public Master Load Balancer (MLB) from scratch:
 ### Setup Ansible:
 - Update cache to be able to find repositories: `sudo apt-get update`
 - Get the "add-apt-repository”: `sudo apt-get install -y software-properties-common`
@@ -23,11 +23,13 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
 - Copy config & hosts files from the repo into the the `/etc/ansible` folder:
     - `cp -i hosts ..`
     - `cp -i ansible.cfg ..`
+    - Note: The `hosts` file will need to be nupdated according to the current array of servers being used
 
 ### Generate SSH Key
-    - Generate a new SSH key on the MLB and add its public key to the github repo's deploy keys. A NEW SSH KEY ON THE MLB AND ADD THE PUBLIC KEY TO GITHUB nodeWiki'S DEPLOY KEYS (AS WELL AS OPEN NEBULA SO YOU CAN USE TO SSH TO PRIVATE MACHINES AND ACCESS APP REPO):
-     ssh-keygen -t rsa
-     cat /root/.ssh/id_rsa.pub
+    - Generate a new SSH key on the MLB and add its public key to the github repo's deploy keys.
+    - Also add this key to open nebula so you can use it to ssh to any newly created private machines. 
+        - ssh-keygen -t rsa
+        - cat /root/.ssh/id_rsa.pub
 
 5. SETUP SSH AGENT
 Startup ssh-agent:  eval $(ssh-agent -s)
