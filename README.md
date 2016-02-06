@@ -44,8 +44,9 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
 ### Ansible Deployment Scripts:
 - **Testing Host Connectability**:
     - `ansible all -m ping`
-- **Seup All Servers**:
+- **Setup All Servers**:
     - `ansible-playbook setupAllServers.yml`
+    - Run at beginning to setup 
 - **Update All Servers**:
     - `ansible-playbook updateAllServers.yml`
 - **Restart Web App**:
