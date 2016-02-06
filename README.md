@@ -59,7 +59,7 @@ Note: Unlike Bash scipts, Ansible scripts are idempotent, meaning they may safel
 
 ### Testing Nginx Setup:
 - `sudo service nginx configtest`
-    - (if [FAIL], check nginx error logs)
+    - if [FAIL], check nginx error logs
 
 ### Updating System & Nginx File Limits (optional)
 cd /etc/security/limits.conf copy text below into bottom of file
