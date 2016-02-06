@@ -51,7 +51,7 @@ Used for Ansible's SSH forwarding
 
 **Note**: It sometimes takes a couple of minutes for ssh-agent forwarding to start working properly.
 
-### Ansible Deployment Scripts:
+### Ansible Deployment Scripts
 These scripts are used to deploy and maintain the web app infrastructure for NodeTweet across an arbitrary array of private servers defined in the `hosts` file located in `/etc/ansible`.
 
 - **Test hosts for connectivity**:
@@ -68,7 +68,7 @@ These scripts are used to deploy and maintain the web app infrastructure for Nod
 
 **Note**: Unlike Bash scipts, Ansible scripts are idempotent, meaning they may safely be run as many times as needed to reach the desired state.
 
-### Testing Nginx Setup:
+### Testing Nginx Setup
 - `sudo service nginx configtest`
     - if [FAIL], check nginx error logs
 - Checking nginx server access & error logs:
