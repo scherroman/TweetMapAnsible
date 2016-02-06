@@ -11,13 +11,13 @@ The below setup assumes a server running Ubuntu-14.04.
 - Install Ansible: `sudo apt-get install -y ansible`
 - Find ansible hosts & config file: `cd /etc/ansible`
 
-### SETUP GIT:
+### Setup Git:
 - `sudo apt-get update`
 - `sudo apt-get install git`
 - `git config --global user.name “My Name"`
 - `git config --global user.email “my.email@domain.com"`
 
-### GET THE TweetMap REPO:
+### Get The TweetMap Repo:
 - Git clone the repo into your `/etc/ansible` folder:
     - `git clone https://github.com/scherroman/TweetMap /etc/ansible/TweetMap`
 - Copy config & hosts files from the repo into the the `/etc/ansible` folder:
