@@ -72,8 +72,8 @@ These scripts are used to deploy and maintain the web app infrastructure for Nod
 - `sudo service nginx configtest`
     - if [FAIL], check nginx error logs
 - Checking nginx server access & error logs:
-    - nano /var/log/nginx/access.log
-    - nano /var/log/nginx/error.log
+    - `nano /var/log/nginx/access.log`
+    - `nano /var/log/nginx/error.log`
 
 ### Updating System & Nginx File Limits (optional, not included in scripts)
 cd /etc/security/limits.conf copy text below into bottom of file
