@@ -16,7 +16,8 @@
     - `git config --global user.email “my.email@domain.com"`
 
 3.GET THE TweetMap REPO
-    - Git clone the repo into your /etc/ansible folder: 
+    - Git clone the repo into your /etc/ansible folder:
+    
     `git clone https://github.com/scherroman/TweetMap /etc/ansible/nodeAnsible`
     - Copy config file & hosts files from repo into ansible folder:
     ```
