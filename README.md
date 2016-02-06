@@ -55,9 +55,9 @@ These scripts are used to deploy and maintain the web app infrastructure for Nod
 - **Restart Web App Hard**:
     - `ansible-playbook restartWebAppHard.yml1
 
-Warning: EVERY TIME YOU SSH BACK INTO THE MASTER VM EXIT AN SSH SESSION AND THEN SSH BACK INTO THE MASTER VM, TO SSH-FORWARD PROPERLY TO THE PRIVATE VMS, YOU MUST START UP SSH-AGENT AGAIN WITH (haven’t been able to automate it without errors):
-Startup ssh-agent:  eval $(ssh-agent -s)
-Add ssh keys to agent:  ssh-add
+Warning: Every time you ssh back into the MLB, to allow Ansible to ssh-forward properly to its hosts, you must start up ssh-agent again with: 
+- Startup ssh-agent: `eval $(ssh-agent -s)`
+- Add ssh keys to agent: `ssh-add`
 
 Note: SOMETIMES TAKES A COUPLE OF MINUTES FOR SSH-AGENT FORWARDING TO START WORKING PROPERLY.
 
