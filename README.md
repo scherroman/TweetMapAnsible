@@ -104,22 +104,17 @@ nginx           soft    nofile          65535
 - Check space available on disk
     - `df -h`
 
-###Helps RethinkDB write more inputs/sec
-- durability soft helps
-- increasing CPUs per machine helps
-- more shards helps
-
 ###"Tunnelception"
 
-ssh -L 9000:10.0.0.17:8080 130.245.168.239 -l root
+Used to access rethinkDB's web interface for an instance running on a private server from your personal computer
 
-where 10.0.0.17 is the private IP of the final destination machine and 130.245.168.146 is the IP of the load balancer.
+`ssh -L 9000:10.0.0.17:8080 130.245.168.239 -l root`
 
-reference: https://piazza.com/class/ic2s17jp8v4is?cid=35
+Where `10.0.0.17` is the private IP of the final destination machine and `130.245.168.146` is the public IP of the MLB.
 
-Afterwards, go to localhost:9000, click on "tables", select table to shard, click on "reconfigure" and change as pleased.
+Afterwards, enter `localhost:9000` in your browser's search, click on `tables`, select the table to shard, click on "reconfigure" and change as pleased.
 
-Useful Commands:
+Ansible:
 Ansible Syntax Checking: ansible-playbook --syntax-check nginx.yml
 
 Creating an Ansible Role:
@@ -135,6 +130,11 @@ Directly tunneling to localhost:80 or localhost:3000
 ssh -L 9000:10.0.0.3:8080 130.245.168.239 -l root
 
 where 10.0.0.17 is the private IP of the final destination machine, 130.245.168.146 is the IP of the load balancer and 8080 is the port to connect to (this can be changed to either 80 or 3000)
+
+###Helps RethinkDB write more inputs/sec
+- durability soft helps
+- increasing CPUs per machine helps
+- more shards helps
 
 ## Other Resources
 ### Regular Expression Helper:
