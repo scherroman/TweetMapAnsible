@@ -104,7 +104,7 @@ nginx           soft    nofile          65535
 
 Where `10.0.0.17` is the private IP of the final destination machine, `130.245.168.146` is the public IP of the MLB, and `8080` is the default port by which to access RethinkDB's web interace.
 
-Afterwards, enter `localhost:9000` in your browser's search, click on `tables`, select the table to shard, click on `reconfigure` and change as pleased.
+Afterwards, enter `localhost:9000` into your browser's search, click on `tables`, select the table to shard, click on `reconfigure` and change as pleased.
 
 ###Directly accessing an app server's web interface
 
