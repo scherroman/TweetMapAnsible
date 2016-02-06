@@ -19,8 +19,8 @@
     - `git clone https://github.com/scherroman/nodeAnsible /etc/ansible/nodeAnsible`
     - copy config file & hosts files from nodeAnsible repo into ansible folder
     ```
-    cp -i hosts ..
-    cp -i ansible.cfg ..
+        cp -i hosts ..
+        cp -i ansible.cfg ..
     ```
     (assuming you are in the `nodeAnsible` repo folder)
 
