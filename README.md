@@ -77,6 +77,8 @@ These scripts are used to deploy and maintain the web app infrastructure for Nod
 
 ### Updating System & Nginx File Limits (optional, not included in scripts)
 
+Can be used to increase traffic load capabilities.
+
 Paste the text below into the bottom of `/etc/security/limits.conf`
 
 ```
