@@ -113,7 +113,7 @@ Where `10.0.0.17` is the private IP of the final destination machine and `130.24
 
 Afterwards, enter `localhost:9000` in your browser's search, click on `tables`, select the table to shard, click on `reconfigure` and change as pleased.
 
-### Ansible Tips:
+### Ansible Tips
 - Ansible Syntax Checking 
     - `ansible-playbook --syntax-check nginx.yml`
 
