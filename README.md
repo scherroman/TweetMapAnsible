@@ -103,11 +103,10 @@ nginx           soft    nofile          65535
 - Check space available on disk
     - `df -h`
 
-WHAT HELPS RETHINKDB WRITE MORE INPUTS/SEC
+**What helps RethinkDB write more inputs/sec**
 - durability soft helps
 - increasing CPUs per machine helps
 - more shards helps
-- having noreply in input can possibly cause problems with submission script
 
 "Tunnelception":
 
