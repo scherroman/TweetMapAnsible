@@ -23,7 +23,6 @@ The below setup assumes a server running Ubuntu-14.04.
     - Copy config & hosts files from the repo into the the `/etc/ansible` folder:
         - `cp -i hosts ..`
         - `cp -i ansible.cfg ..`
-        - (assuming you are in repo folder)
 
 4. GENERATE SSH KEY ON MASTER SERVER AND ADD PUBLIC KEY TO GITHUB nodeWiki DEPLOY KEYS (AS WELL AS OPEN NEBULA SO YOU CAN USE TO SSH TO PRIVATE MACHINES AND ACCESS APP REPO):
      ssh-keygen -t rsa
