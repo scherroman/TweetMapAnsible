@@ -42,7 +42,7 @@ The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula fo
     - [databaseServers]
 
 ### Ansible Deployment Scripts:
-These scripts are used to deploy and maintain the web app infrastructure for NodeTweet across an arbitrary array of private servers defined in the `hosts` file located in `/etc/ansible`.
+These scripts are used to deploy and maintain the web app infrastructure for NodeTweet across an arbitrary array of (usually private) servers defined in the `hosts` file located in `/etc/ansible`.
 
 Note: Unlike Bash scipts, Ansible scripts are idempotent, meaning they may safely be run as many times as needed to reach the desired state.
 - **Test for Host Connectability**:
