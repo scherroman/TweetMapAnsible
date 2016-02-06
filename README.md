@@ -103,15 +103,19 @@ nginx           soft    nofile          65535
 - Check space available on disk
     - `df -h`
 
-###"Tunnelception"
-
-Used to access rethinkDB's web interface for an instance running on a remote server.
+###Access a remote server's RethinkDB web interface
 
 `ssh -L 9000:10.0.0.17:8080 130.245.168.239 -l root`
 
-Where `10.0.0.17` is the private IP of the final destination machine and `130.245.168.146` is the public IP of the MLB.
+Where `10.0.0.17` is the private IP of the final destination machine, `130.245.168.146` is the public IP of the MLB, and `8080` is the default port by which to access RethinkDB's web interace.
 
 Afterwards, enter `localhost:9000` in your browser's search, click on `tables`, select the table to shard, click on `reconfigure` and change as pleased.
+
+###Directly accessing an app server's web interface
+
+- `ssh -L 9000:10.0.0.3:xxxx 130.245.168.239 -l root`
+
+Where `10.0.0.17` is the private IP of the final destination machine, `130.245.168.146` is the public IP of the MLB, and `xxxx` is the port to connect to (generally this can be changed to 80 or something like 3000, depending on whether or not you are using a reverse proxy and what port your web app is actually running out of)
 
 ### Ansible Tips
 - Ansible Syntax Checking 
@@ -124,12 +128,6 @@ Afterwards, enter `localhost:9000` in your browser's search, click on `tables`, 
     - `mkdir handlers/main.yml meta/main.yml tasks/main.yml vars/main.yml`
  
 **Note**: Use `connection: local` in Ansible playbooks when intending to run tasks locally on the current server
-
-Directly tunneling to localhost:80 or localhost:3000
-
-ssh -L 9000:10.0.0.3:8080 130.245.168.239 -l root
-
-where 10.0.0.17 is the private IP of the final destination machine, 130.245.168.146 is the IP of the load balancer and 8080 is the port to connect to (this can be changed to either 80 or 3000)
 
 ###Helps RethinkDB write more inputs/sec
 - durability soft helps
