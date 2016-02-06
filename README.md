@@ -2,7 +2,7 @@
 
 The below setup assumes a server running Ubuntu-14.04.
 
-## Setting up the Master Load Balancer from scratch:
+## Setting up the Master Load Balancer (MLB) from scratch:
 1. SETUP ANSIBLE:
     - Update cache to be able to find repositories: `sudo apt-get update`
     - Get the "add-apt-repository”: `sudo apt-get install -y software-properties-common`
@@ -24,11 +24,11 @@ The below setup assumes a server running Ubuntu-14.04.
         - `cp -i hosts ..`
         - `cp -i ansible.cfg ..`
 
-4. GENERATE SSH KEY ON MASTER SERVER AND ADD PUBLIC KEY TO GITHUB nodeWiki DEPLOY KEYS (AS WELL AS OPEN NEBULA SO YOU CAN USE TO SSH TO PRIVATE MACHINES AND ACCESS APP REPO):
+4. GENERATE SSH KEY ON MLB AND ADD PUBLIC KEY TO GITHUB nodeWiki DEPLOY KEYS (AS WELL AS OPEN NEBULA SO YOU CAN USE TO SSH TO PRIVATE MACHINES AND ACCESS APP REPO):
      ssh-keygen -t rsa
      cat /root/.ssh/id_rsa.pub
 
-5. MAKE SURE SSH AGENT IS SETUP/READY
+5. SETUP SSH AGENT
 Startup ssh-agent:  eval $(ssh-agent -s)
 Add ssh keys to agent:  ssh-add
 
