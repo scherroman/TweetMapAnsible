@@ -1,6 +1,6 @@
 # NodeTweetAnsible
 
-The below setup assumes a server running Ubuntu-14.04.
+The below setup assumes a server running Ubuntu-14.04, as well as Open Nebula for cloud management.
 
 ## Setting up the Master Load Balancer (MLB) from scratch:
 ### Setup Ansible:
@@ -25,7 +25,7 @@ The below setup assumes a server running Ubuntu-14.04.
     - `cp -i ansible.cfg ..`
 
 ### Generate SSH Key
-5. GENERATE A NEW SSH KEY ON THE MLB AND ADD THE PUBLIC KEY TO GITHUB nodeWiki'S DEPLOY KEYS (AS WELL AS OPEN NEBULA SO YOU CAN USE TO SSH TO PRIVATE MACHINES AND ACCESS APP REPO):
+    - Generate a new SSH key on the MLB and add its public key to the github repo's deploy keys. A NEW SSH KEY ON THE MLB AND ADD THE PUBLIC KEY TO GITHUB nodeWiki'S DEPLOY KEYS (AS WELL AS OPEN NEBULA SO YOU CAN USE TO SSH TO PRIVATE MACHINES AND ACCESS APP REPO):
      ssh-keygen -t rsa
      cat /root/.ssh/id_rsa.pub
 
