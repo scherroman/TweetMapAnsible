@@ -37,7 +37,6 @@ This section explains how to use this repository's ansible scripts to setup and 
     - [localServer]
     - [frontEndMasterServer]
     - [frontEndSlaveServers]
-    - [frontEndServers]
 
 ### Setup SSH Agent
 Used for Ansible's SSH forwarding
