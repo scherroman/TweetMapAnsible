@@ -106,11 +106,11 @@ Where `10.0.0.17` is the private IP of the final destination machine, `130.245.1
 
 Afterwards, enter `localhost:9000` into your browser's search, click on `tables`, select the table to shard, click on `reconfigure` and change as pleased.
 
-### Directly accessing an app server's web interface
+### Directly accessing a private app server's web interface
 
-- `ssh -L 9000:10.0.0.3:xxxx 130.245.168.239 -l root`
+- `ssh -L 9000:x.x.x.x:yyyy z.z.z.z -l root`
 
-Where `10.0.0.17` is the private IP of the final destination machine, `130.245.168.146` is the public IP of the MLB, and `xxxx` is the port to connect to (generally this can be changed to 80 or something like 3000, depending on whether or not you are using a reverse proxy and what port your web app is actually running out of).
+Where `x.x.x.x` is the private IP of the final destination machine (private app server), `z.z.z.z` is the public IP of the MLB (public load balancer), and `yyyy` is the port to connect to on the final destination machine (generally this is something like 80 or 3000, depending on whether or not you are using a reverse proxy and what port your web app is actually running out of).
 
 ### Ansible Tips
 - Ansible Syntax Checking 
