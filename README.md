@@ -98,7 +98,7 @@ nginx           soft    nofile          65535
 
 ## Misc Resources
 
-###Accessing a remote server's RethinkDB web interface
+### Accessing a remote server's RethinkDB web interface
 
 `ssh -L 9000:10.0.0.17:8080 130.245.168.239 -l root`
 
@@ -106,7 +106,7 @@ Where `10.0.0.17` is the private IP of the final destination machine, `130.245.1
 
 Afterwards, enter `localhost:9000` into your browser's search, click on `tables`, select the table to shard, click on `reconfigure` and change as pleased.
 
-###Directly accessing an app server's web interface
+### Directly accessing an app server's web interface
 
 - `ssh -L 9000:10.0.0.3:xxxx 130.245.168.239 -l root`
 
@@ -124,7 +124,7 @@ Where `10.0.0.17` is the private IP of the final destination machine, `130.245.1
  
 **Note**: Use `connection: local` in Ansible playbooks when intending to run tasks locally on the current server.
 
-###What helps RethinkDB write more inputs/sec?
+### What helps RethinkDB write more inputs/sec?
 - durability soft helps
 - increasing CPUs per machine helps
 - more shards helps
@@ -142,6 +142,6 @@ Where `10.0.0.17` is the private IP of the final destination machine, `130.245.1
 
 https://regex101.com/#javascript
 
-### cURL to Node.js converter (not 100% accurate but almost there)
+### Curl to Node.js converter (not 100% accurate but almost there)
 
 http://curl.trillworks.com/#node
